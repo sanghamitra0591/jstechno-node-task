@@ -7,6 +7,7 @@ const { salaryRouter } = require("./routes/salary.route");
 const { attendanceRouter } = require("./routes/attendance.route");
 const { userRouter } = require("./routes/user.route");
 const { Authentication } = require("./middleware/Authentication.middleware");
+const { salaryCalculationRouter } = require("./routes/salarycalculation.route");
 const app= express();
 
 app.use(express.json());
@@ -29,6 +30,8 @@ app.use("/positions", positionRouter);
 app.use("/salaries", salaryRouter);
 app.use("/employees", employeeRouter);
 app.use("/attendances", attendanceRouter);
+
+app.use("/salarycalculation", salaryCalculationRouter);
 
 
 
